@@ -25,7 +25,7 @@ def Judge(s):
         print('(', 5, ',', '"', s, '"', ')', sep='')
 
     else:
-        if len(s) >= 2 and s[0] == '"' and s[-1] == '"'or s=='\n':  # 判断字符串
+        if len(s) >= 2 and s[0] == '"' and s[-1] == '"'or s=='\n':  
             print(end="")
         else:
             print('(', 'error', ',', '"', s, '"', ')', sep='')  # 没定义或者错误串
