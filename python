@@ -29,7 +29,7 @@ def Judge(s):
 
 if __name__ == '__main__':
     #读取文件
-    f = open('./test.txt', 'r')
+    f = open('E://test.txt', 'r')
     result = []
     for line in f:
         if len(line) == 1:
@@ -45,22 +45,3 @@ if __name__ == '__main__':
     #词法分析
     for i in result:
         Judge(i)
-
-
-
-
-# import re
-# all=re.compile('([0-9]+[a-z|A-Z|_]+|\d+\.\d+[eE][-+]?\d+|\d+\.\d+|[1-9]\d*|0[0-7]+|0x[0-9a-fA-F]+|'
-#                '[a-z|A-Z|0-9|_]*\".*\"[a-z|A-Z|0-9|_]*|[a-zA-Z_]\w*|\".*\"|>>|<<|'
-#                '::|->|\+=|\-=|\*=|/=|%=|>=|<=|==|!=|&&|\|\||\+|\-|\*|/|=|>|'
-#                '<|!|^|%|~|\?|:|,|;|\(|\)|\[|\]|\{|\}|\"|\')')
-#
-# ss = 'int main(){ int a = 1;"}'
-# list = []
-# f = open('E://test.txt','r')
-# for line in f:
-#     if len(line) == 1:
-#         list.extend(line)
-#     else:
-#         list.extend(all.findall(line))
-# print(list)
