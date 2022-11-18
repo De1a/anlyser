@@ -13,7 +13,7 @@ all = re.compile('([0-9]+[a-z|A-Z|_]+[0-9]*|\d+\.\d+[eE][-+]?\d+|\d+\.\d+|[1-9]\
 
 
 def Judge(s):
-    if s[0].isalpha() and s in keyword:  # 判断关键字
+    if s[0].isalpha() and s in keyword:  # 判断保留字
         print('(', 1, ',', '"', s, '"', ')', sep='')
     elif s[0].isalpha() and s not in keyword and s.isalnum():  # 判断标识符
         print('(', 2, ',', '"', s, '"', ')', sep='')
@@ -24,11 +24,11 @@ def Judge(s):
     elif s in Symbol2:  # 判断边界符
         print('(', 5, ',', '"', s, '"', ')', sep='')
 
-    # else:
-    #     if len(s) >= 2 and s[0] == '"' and s[-1] == '"':  # 判断字符串
-    #         print('( ', s, '->', 50, ' )', sep='')
-    #     # else:                                   #没定义或者错误串
-    #         # print('( ',s,'->','暂无定义',' )')
+    else:
+        if len(s) >= 2 and s[0] == '"' and s[-1] == '"'or s=='\n':  # 判断字符串
+            print(end="")
+        else:
+            print('(', 'error', ',', '"', s, '"', ')', sep='')  # 没定义或者错误串
 
 
 if __name__ == '__main__':
