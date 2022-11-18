@@ -29,7 +29,7 @@ def Judge(s):
 
 if __name__ == '__main__':
     #读取文件
-    f = open('E://test.txt', 'r')
+    f = open('./test.txt', 'r')
     result = []
     for line in f:
         if len(line) == 1:
